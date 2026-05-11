@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إنجاز معاملات المحاكم ودائرة القضاء بالعين | اتصل الآن</title>
+    <title>إنجاز معاملات المحاكم ودائرة القضاء والنيابة | العين</title>
+    
+    <meta name="keywords" content="انجاز, إنجاز, محكمه, نيابه, دائرة القضاء, وكاله, اقرار حاله, اعاله, عقد زواج, ماذون شرعي, مليج, ملجه, تنازل, كفاله, قضيه, دعوى, التوجيه الاسري, كاتب العدل, حضانه, طلاق, خلع, عريضه, بلاغ, مخالفات, حصر ارث, اعلام وراثه">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18145586771"></script>
     <script>
@@ -27,29 +29,35 @@
             margin: 0; padding: 0;
             background-color: var(--light);
             color: #333;
+            padding-bottom: 80px; /* مساحة للزر الثابت */
         }
 
         /* زر الاتصال الثابت للجوال */
-        .mobile-call-btn {
+        .sticky-contact {
             position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--success);
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 800;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
             z-index: 1000;
+        }
+
+        .sticky-btn {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 10px;
-            width: 80%;
             justify-content: center;
-            font-size: 1.2rem;
+            gap: 10px;
         }
+
+        .call-btn { background: var(--success); color: white; }
+        .map-btn { background: var(--primary); color: white; }
 
         header {
             background: white;
@@ -66,27 +74,18 @@
             background-size: cover;
             color: white;
             text-align: center;
-            padding: 60px 20px 100px;
+            padding: 60px 20px;
         }
 
         .hero h1 { font-size: 2.2rem; margin-bottom: 15px; color: var(--accent); }
         .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 25px; opacity: 0.9; }
-
-        .trust-badge {
-            background: rgba(255,255,255,0.15);
-            padding: 8px 20px;
-            border-radius: 50px;
-            display: inline-block;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             padding: 40px 5%;
-            margin-top: -50px;
+            margin-top: -40px;
         }
 
         .service-card {
@@ -94,13 +93,8 @@
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border-bottom: 5px solid var(--accent);
+            border-top: 5px solid var(--accent);
         }
-
-        .service-card h3 { color: var(--primary); margin-top: 0; }
-        .service-card ul { padding: 0; list-style: none; }
-        .service-card li { margin-bottom: 10px; padding-right: 25px; position: relative; }
-        .service-card li::before { content: "L"; transform: scaleX(-1) rotate(-45deg); position: absolute; right: 0; color: var(--accent); font-weight: bold; }
 
         .location-section {
             padding: 50px 5%;
@@ -108,19 +102,19 @@
             background: white;
         }
 
-        .map-placeholder {
-            width: 100%;
-            height: 300px;
-            background: #eee;
-            border-radius: 15px;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 10px;
         }
 
-        @media (min-width: 768px) {
-            .mobile-call-btn { display: none; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -128,59 +122,53 @@
 
     <header>
         <div class="logo"><strong>مكتب إنجاز العين</strong></div>
-        <a href="tel:0543103028" style="color: var(--primary); text-decoration: none; font-weight: 700;">📞 0543103028</a>
+        <div class="reviews">⭐ 4.5 Google Reviews</div>
     </header>
 
     <section class="hero">
-        <div class="trust-badge">⭐ 4.5/5 تقييم العملاء على جوجل</div>
-        <h1>إنجاز معاملات المحاكم ودائرة القضاء بالعين</h1>
-        <p>نوفر عنك عناء الانتظار ونقوم بتخليص كافة معاملاتك القانونية والعدلية بدقة وسرعة متناهية في قلب مدينة العين.</p>
-        <a href="tel:0543103028" class="contact-btn" style="background: var(--accent); color: white; padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 1.2rem;">اتصل بنا للاستشارة فوراُ</a>
+        <h1>إنجاز معاملات المحاكم ودائرة القضاء</h1>
+        <p>نحن دليلك الموثوق في مدينة العين لإنهاء كافة الإجراءات القانونية، عقود الزواج، ومعاملات كاتب العدل بدقة واحترافية.</p>
+        <a href="tel:0543103028" class="cta-button">اتصل بنا الآن: 0543103028</a>
     </section>
 
     <div class="services-grid">
         <div class="service-card">
-            <h3>🏛️ المحاكم والنيابة</h3>
-            <ul>
-                <li>فتح <strong>قضية</strong> وتسجيل <strong>دعوى</strong></li>
-                <li>كتابة <strong>عريضة</strong> وتقديم <strong>بلاغ</strong></li>
-                <li>متابعة إجراءات <strong>النيابة العامة</strong></li>
-                <li>تسوية كافة أنواع <strong>المخالفات</strong></li>
-            </ul>
-        </div>
-        <div class="service-card">
             <h3>⚖️ كاتب العدل والتوثيق</h3>
-            <ul>
-                <li>إصدار وتصديق <strong>وكالة</strong> قانونية</li>
-                <li>توثيق <strong>اقرار حالة</strong> و <strong>اعالة</strong></li>
-                <li>معاملات الـ <strong>تنازل</strong> والـ <strong>كفالة</strong></li>
-                <li>خدمات <strong>دائرة القضاء</strong> المتكاملة</li>
-            </ul>
+            <p>إصدار وتصديق أي <strong>وكاله</strong>، إنهاء إجراءات الـ <strong>تنازل</strong> والـ <strong>كفاله</strong>، واستخراج <strong>اقرار حاله</strong> معتمد لدى <strong>دائرة القضاء</strong>.</p>
         </div>
         <div class="service-card">
-            <h3>💍 الزواج والأسرية</h3>
-            <ul>
-                <li>تنسيق <strong>ماذون شرعي</strong> (مليج/ملجة)</li>
-                <li>توثيق <strong>عقد زواج</strong> رسمي</li>
-                <li>ملفات <strong>التوجيه الاسري</strong></li>
-                <li>قضايا <strong>حضانة</strong>، <strong>طلاق</strong>، و <strong>خلع</strong></li>
-            </ul>
+            <h3>💍 الزواج والأحوال الشخصية</h3>
+            <p>تنسيق <strong>ماذون شرعي</strong> (خدمات الـ <strong>مليج</strong> / <strong>ملجه</strong>)، تسجيل <strong>عقد زواج</strong>، واستخراج شهادات الـ <strong>اعاله</strong>.</p>
+        </div>
+        <div class="service-card">
+            <h3>🏛️ المحاكم والنيابة</h3>
+            <p><strong>انجاز</strong> طلبات أي <strong>محكمه</strong> أو <strong>نيابه</strong>، تسجيل <strong>دعوى</strong> أو <strong>قضيه</strong>، كتابة <strong>عريضه</strong>، ومتابعة الـ <strong>مخالفات</strong>.</p>
+        </div>
+        <div class="service-card">
+            <h3>👨‍👩‍👧 التوجيه والارث</h3>
+            <p>متابعة ملفات <strong>التوجيه الاسري</strong>، إجراءات الـ <strong>طلاق</strong> والـ <strong>خلع</strong> والـ <strong>حضانه</strong>، واستخراج <strong>حصر ارث</strong>.</p>
         </div>
     </div>
 
     <section class="location-section">
         <h2>📍 موقعنا في العين</h2>
-        <p>شارع خليفة بن زايد - مبنى بن حم - المويجعي</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=24.2185,55.7423" target="_blank" style="display: inline-block; margin-top: 15px; color: var(--primary); font-weight: 700;">افتح الموقع في خرائط جوجل ➔</a>
+        <p>شارع خليفة بن زايد - مبنى بن حم - المويجعي - العين</p>
+        <p>ساعات العمل: مفتوح حتى 10:30 مساءً</p>
+        <a href="https://maps.app.goo.gl/PiUdK8RCrQVkKqEm9" target="_blank" class="cta-button" style="background: var(--primary);">افتح الموقع في خرائط جوجل</a>
     </section>
 
-    <footer style="text-align: center; padding: 40px; background: var(--primary); color: white;">
-        <p>© 2026 مكتب إنجاز لتخليص المعاملات - العين</p>
+    <footer style="text-align: center; padding: 20px; background: #f1f1f1; font-size: 0.9rem;">
+        © 2026 مكتب إنجاز لمعاملات المحاكم والنيابة. جميع الحقوق محفوظة.
     </footer>
 
-    <a href="tel:0543103028" class="mobile-call-btn">
-        <span>📞</span> اتصل بنا الآن لإنجاز معاملتك
-    </a>
+    <div class="sticky-contact">
+        <a href="https://maps.app.goo.gl/PiUdK8RCrQVkKqEm9" target="_blank" class="sticky-btn map-btn">
+            📍 الاتجاهات (Map)
+        </a>
+        <a href="tel:0543103028" class="sticky-btn call-btn">
+            📞 اتصل الآن
+        </a>
+    </div>
 
 </body>
 </html>
